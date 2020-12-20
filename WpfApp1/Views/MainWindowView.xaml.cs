@@ -25,6 +25,7 @@ namespace WpfApp1.Views
 
         public MainWindowView(Пользователь user)
         {
+            dbContext.Предпочтения_обучающегося.Load();
             dbContext.Дисциплины.Load();
             this.user = user;
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var index = dbContext.Предпочтения_обучающегося.ToArray().Last().ID + 1;
             foreach (var child in stackPanel.Children)
             {
                 if (child is ComboBox)
@@ -61,6 +63,7 @@ namespace WpfApp1.Views
 
                     var prefear = new Предпочтения_обучающегося()
                     {
+                        ID = index,
                         ID_дисциплины = disct.ID_дисциплины,
                         ID_пользователья = user.ID_пользователья,
                         Дисциплины = disct,
@@ -72,10 +75,14 @@ namespace WpfApp1.Views
                         continue;
                     }
 
-                    user.Предпочтения_обучающегося.Add(prefear);
+                    dbContext.Предпочтения_обучающегося.Add(prefear);
+                    index++;
                 }
-                dbContext.SaveChangesAsync();
+
             }
+            dbContext.SaveChanges();
+            dbContext.Dispose();
+            this.Close();
         }
     }
 }

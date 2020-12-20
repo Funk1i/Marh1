@@ -30,17 +30,14 @@ namespace WpfApp1.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var window = new MainWindowView(user);
-            this.Hide();
-            if(window.ShowDialog() == true)
-            {
-                this.Show();
-            }
+            window.Show();
         }
 
         //Показать карту равития
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Еще не реализовано");
+            var mapWindow = new MapView(user);
+            mapWindow.Show();
         }
     }
 }

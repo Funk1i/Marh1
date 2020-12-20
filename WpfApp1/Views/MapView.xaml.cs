@@ -25,6 +25,7 @@ namespace WpfApp1.Views
         public MapView(Пользователь user)
         {
             var subjects = dbContext.Дисциплины.ToList();
+            dbContext.Dispose();
             educationRout = Analyzer.Analyze(user, subjects).ToList();
             InitializeComponent();
             ShowEducationMap();

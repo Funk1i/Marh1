@@ -40,6 +40,7 @@ namespace WpfApp1
             {
                 var mainPage = new MenuView(user);
                 mainPage.Show();
+                dbContext.Dispose();
                 this.Close();
             }
             else
