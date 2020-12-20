@@ -44,7 +44,38 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           user.Предпочтения_обучающегося.Дисциплины.
+            foreach (var child in grid.Children)
+            {
+                if (child is ListBox)
+                {
+                    if ((child as ListBox).SelectedItem == null)
+                    {
+                        continue;
+                    }
+
+                    var disct = (child as ListBox).SelectedItem as Дисциплины;
+                    if(disct == null)
+                    {
+                        continue;
+                    }
+
+                    var prefear = new Предпочтения_обучающегося()
+                    {
+                        ID_дисциплины = disct.ID_дисциплины,
+                        ID_пользователья = user.ID_пользователья,
+                        Дисциплины = disct,
+                        Пользователь = user
+                    };
+
+                    if(user.Предпочтения_обучающегося.Any(x => x.Дисциплины == disct))
+                    {
+                        continue;
+                    }
+
+                    user.Предпочтения_обучающегося.Add(prefear);
+                }
+                dbContext.SaveChangesAsync();
+            }
         }
     }
 }

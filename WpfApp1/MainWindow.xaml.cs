@@ -36,14 +36,10 @@ namespace WpfApp1
 
             if(user != null)
             {
-                var mainPage = new MainWindowView(user);
+                var mainPage = new MenuView(user);
+                mainPage.Show();
                 this.Close();
             }
-        }
-
-        private void GoToTheMainPage()
-        {
-
         }
     }
 }
