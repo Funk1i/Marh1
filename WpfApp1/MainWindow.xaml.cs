@@ -38,9 +38,8 @@ namespace WpfApp1
 
             if(user != null)
             {
-                var mainPage = new MenuView(user);
+                var mainPage = new MenuView(user, dbContext);
                 mainPage.Show();
-                dbContext.Dispose();
                 this.Close();
             }
             else

@@ -20,11 +20,12 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class MainWindowView : Window
     {
-        private readonly BZEntities dbContext = new BZEntities();
+        private readonly BZEntities dbContext;
         private readonly Пользователь user;
 
-        public MainWindowView(Пользователь user)
+        public MainWindowView(Пользователь user, BZEntities dbContext)
         {
+            this.dbContext = dbContext;
             dbContext.Предпочтения_обучающегося.Load();
             dbContext.Дисциплины.Load();
             this.user = user;
@@ -81,7 +82,6 @@ namespace WpfApp1.Views
 
             }
             dbContext.SaveChanges();
-            dbContext.Dispose();
             this.Close();
         }
     }

@@ -20,12 +20,12 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class MapView : Window
     {
-        private readonly BZEntities dbContext = new BZEntities();
+        private readonly BZEntities dbContext;
         private List<Дисциплины> educationRout;
-        public MapView(Пользователь user)
+        public MapView(Пользователь user, BZEntities dbContext)
         {
+            this.dbContext = dbContext;
             var subjects = dbContext.Дисциплины.ToList();
-            dbContext.Dispose();
             educationRout = Analyzer.Analyze(user, subjects).ToList();
             InitializeComponent();
             ShowEducationMap();

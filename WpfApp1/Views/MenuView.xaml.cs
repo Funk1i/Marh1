@@ -20,23 +20,25 @@ namespace WpfApp1.Views
     public partial class MenuView : Window
     {
         private readonly Пользователь user;
-        public MenuView(Пользователь user)
+        private readonly BZEntities dbContext;
+        public MenuView(Пользователь user, BZEntities dbContext)
         {
             this.user = user;
+            this.dbContext = dbContext;
             InitializeComponent();
         }
 
         //Добавить пердпочитаемы предметы
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var window = new MainWindowView(user);
+            var window = new MainWindowView(user, dbContext);
             window.Show();
         }
 
         //Показать карту равития
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var mapWindow = new MapView(user);
+            var mapWindow = new MapView(user, dbContext);
             mapWindow.Show();
         }
     }
