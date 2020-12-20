@@ -20,15 +20,15 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class MainWindowView : Window
     {
-        private readonly ObrazMarshrutEntities dbContext = new ObrazMarshrutEntities();
+        private readonly BZEntities dbContext = new BZEntities();
         private readonly Пользователь user;
 
         public MainWindowView(Пользователь user)
         {
             dbContext.Дисциплины.Load();
             this.user = user;
-            FillListBoxes();
             InitializeComponent();
+            FillListBoxes();
         }
 
         private void FillListBoxes()
@@ -44,7 +44,7 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            user.Предпочтения_обучающегося.Дисциплины
+           user.Предпочтения_обучающегося.Дисциплины.
         }
     }
 }

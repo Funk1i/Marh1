@@ -13,10 +13,10 @@ namespace WpfApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ObrazMarshrutEntities : DbContext
+    public partial class BZEntities : DbContext
     {
-        public ObrazMarshrutEntities()
-            : base("name=ObrazMarshrutEntities")
+        public BZEntities()
+            : base("name=BZEntities")
         {
         }
     
@@ -25,11 +25,9 @@ namespace WpfApp1
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Дисциплины> Дисциплины { get; set; }
         public virtual DbSet<Обучающейся> Обучающейся { get; set; }
         public virtual DbSet<Пользователь> Пользователь { get; set; }
         public virtual DbSet<Предпочтения_обучающегося> Предпочтения_обучающегося { get; set; }
-        public virtual DbSet<Предприятия> Предприятия { get; set; }
     }
 }

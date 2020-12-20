@@ -14,12 +14,19 @@ namespace WpfApp1
     
     public partial class Пользователь
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Пользователь()
+        {
+            this.Предпочтения_обучающегося = new HashSet<Предпочтения_обучающегося>();
+        }
+    
         public int ID_пользователья { get; set; }
         public string Логин { get; set; }
         public string Пароль { get; set; }
         public int ID_обучаещегося { get; set; }
     
         public virtual Обучающейся Обучающейся { get; set; }
-        public virtual Предпочтения_обучающегося Предпочтения_обучающегося { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Предпочтения_обучающегося> Предпочтения_обучающегося { get; set; }
     }
 }

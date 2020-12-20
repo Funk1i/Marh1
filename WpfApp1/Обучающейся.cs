@@ -31,7 +31,6 @@ namespace WpfApp1
         public string Категория_ВУ { get; set; }
         public Nullable<int> ID_предприятия { get; set; }
     
-        public virtual Предприятия Предприятия { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Пользователь> Пользователь { get; set; }
     }

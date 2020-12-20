@@ -21,7 +21,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly ObrazMarshrutEntities dbContext = new ObrazMarshrutEntities();
+        private readonly BZEntities dbContext = new BZEntities();
         public MainWindow()
         {
             InitializeComponent();
