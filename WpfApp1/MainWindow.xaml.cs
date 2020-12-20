@@ -40,6 +40,10 @@ namespace WpfApp1
                 mainPage.Show();
                 this.Close();
             }
+            else
+            {
+                Error_lbl.Content = "Не верно введен логин или пароль";
+            }
         }
     }
 }

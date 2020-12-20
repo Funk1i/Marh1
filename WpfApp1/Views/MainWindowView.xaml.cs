@@ -33,7 +33,7 @@ namespace WpfApp1.Views
 
         private void FillListBoxes()
         {
-            foreach(var child in grid.Children)
+            foreach(var child in stackPanel.Children)
             {
                 if(child is ListBox)
                 {
@@ -44,7 +44,7 @@ namespace WpfApp1.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var child in grid.Children)
+            foreach (var child in stackPanel.Children)
             {
                 if (child is ListBox)
                 {

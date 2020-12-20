@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1.Views"
         mc:Ignorable="d"
         Title="MainWindowView" Height="450" Width="800">
-    <Grid x:Name="grid">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="auto" Margin="50,10">
+    <Grid>
+        <StackPanel x:Name="stackPanel" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="auto" Margin="50,10">
             <Label Content="Дисциплина 1" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
             <ListBox x:Name="Predmet1_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 2" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />

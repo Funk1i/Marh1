@@ -13,7 +13,7 @@
             <Label Content="Пароль" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             <PasswordBox x:Name="Password_tb" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
             <Button Content="Войти" HorizontalAlignment="Stretch" Margin="0,15" VerticalAlignment="Top" Click="Button_Click"/>
-            <Label x:Name="Error_lbl" Content="Пароль" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <Label x:Name="Error_lbl" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>
 </Window>
