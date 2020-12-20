@@ -35,9 +35,9 @@ namespace WpfApp1.Views
         {
             foreach(var child in stackPanel.Children)
             {
-                if(child is ListBox)
+                if(child is ComboBox)
                 {
-                    (child as ListBox).ItemsSource = dbContext.Дисциплины.ToList();
+                    (child as ComboBox).ItemsSource = dbContext.Дисциплины.ToList();
                 }
             }
         }
@@ -46,14 +46,14 @@ namespace WpfApp1.Views
         {
             foreach (var child in stackPanel.Children)
             {
-                if (child is ListBox)
+                if (child is ComboBox)
                 {
-                    if ((child as ListBox).SelectedItem == null)
+                    if ((child as ComboBox).SelectedItem == null)
                     {
                         continue;
                     }
 
-                    var disct = (child as ListBox).SelectedItem as Дисциплины;
+                    var disct = (child as ComboBox).SelectedItem as Дисциплины;
                     if(disct == null)
                     {
                         continue;

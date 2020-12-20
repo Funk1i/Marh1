@@ -9,17 +9,17 @@
     <Grid>
         <StackPanel x:Name="stackPanel" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="auto" Margin="50,10">
             <Label Content="Дисциплина 1" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet1_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet1_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 2" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet2_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet2_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 3" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet3_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet3_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 4" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet4_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet4_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 5" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet5_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet5_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Label Content="Дисциплина 6" FontWeight="Bold" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <ListBox x:Name="Predmet6_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
+            <ComboBox x:Name="Predmet6_lb" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="22" Margin="0, 5, 0, 0" />
             <Button Content="Добавить" HorizontalAlignment="Stretch" Margin="0,15" VerticalAlignment="Top" Click="Button_Click"/>
         </StackPanel>
     </Grid>
