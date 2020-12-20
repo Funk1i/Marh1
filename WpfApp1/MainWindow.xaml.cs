@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Views;
 
 namespace WpfApp1
 {
@@ -20,10 +21,29 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ObrazMarshrutEntities dbContext = new ObrazMarshrutEntities();
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var login = Login_tb.Text;
+            var password = Password_tb.Password;
+
+            var user = dbContext.Пользователь.FirstOrDefault(x => x.Логин == login && x.Пароль == password);
+
+            if(user != null)
+            {
+                var mainPage = new MainWindowView(user);
+                this.Close();
+            }
+        }
+
+        private void GoToTheMainPage()
+        {
+
+        }
     }
 }

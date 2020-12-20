@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Width="200">
-            <Label Content="Логин" HorizontalAlignment="Stretch"  VerticalAlignment="Top" /> <!--Все, можешь забирать контроль-->
-            <TextBox HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="auto" Width="200" >
+            <Label Content="Логин" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
+            <TextBox x:Name="Login_tb" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top" />
             <Label Content="Пароль" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
-            <Button Content="Войти" HorizontalAlignment="Stretch" Margin="0,15" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="Password_tb" HorizontalAlignment="Stretch"  VerticalAlignment="Top" />
+            <Button Content="Войти" HorizontalAlignment="Stretch" Margin="0,15" VerticalAlignment="Top" Click="Button_Click"/>
+            <Label x:Name="Error_lbl" Content="Пароль" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>
 </Window>

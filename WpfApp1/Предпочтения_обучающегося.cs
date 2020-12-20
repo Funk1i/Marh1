@@ -11,14 +11,15 @@ namespace WpfApp1
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Data.Entity;
+
     public partial class Предпочтения_обучающегося
     {
         public int ID_пользователья { get; set; }
         public int ID_обучаещегося { get; set; }
         public Nullable<int> ID_дисциплины { get; set; }
     
-        public virtual Дисциплины Дисциплины { get; set; }
+        public virtual DbSet<Дисциплины> Дисциплины { get; set; }
         public virtual Пользователь Пользователь { get; set; }
     }
 }
